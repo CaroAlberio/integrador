@@ -11,11 +11,12 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body{
     width: 100%;
-    color: white;
+    color: black;
 }
 
 .section-container {
@@ -33,12 +34,13 @@ body{
 }
 
 button{
-    background-color: darkgoldenrod;
-    border: 0px solid darkgoldenrod;
+    background-color: orange;
+    border: 0px solid orange;
+    border-radius: 10px;
     outline: none;
     width: 180px;
     height: 40px;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
@@ -46,7 +48,9 @@ button{
     }
 
 button:hover {
-    background-color: black;
+    background-color: white;
+    color: orange;
+    border: 0px solid orange;
     transition: all 0.4s linear;
 }
 
@@ -86,6 +90,11 @@ button:hover {
     top: 0%;
 }
 
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 .logo-container img{
     width: 10%;
 }
@@ -98,27 +107,28 @@ button:hover {
 }
 
 .navbar-list {
-    gap: 50px;
+    gap: 60px;
 }
 
-.navbar i {
+.navbar i {  
     font-size: 40px;
     color: orange;
     cursor: pointer;
-    display: none;
+    display: none;  
+    
 }
 
 #toggle-menu{
-    display: none;
+display: none;
 }
 
 .navbar a {
-    color: darkorange;
+    color: orange;
     font-size: 19px;
 }
 
 .navbar-list li:last-child > a {
-    border: 1px solid;
+    border: 1px solid orange;
     font-size: 19px;
     padding: 8px 40px;
     border-radius: 10px;
@@ -126,32 +136,209 @@ button:hover {
 }
 
 .navbar-list li:last-child > a:hover {
-    background-color: chocolate;
+    background-color: orange;
     color: white;
     transition: all 0.3s linear;
     font-weight: 600px;
 }
 
 @media (max-width: 992px) {
-    .header {
-        padding: 0px 50px 0px 10px;
+.header{
+    padding: 0px 50px 0px 10px
+}
+.navbar i {
+    display: flex;
+}
+
+.navbar-list {
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: none;
+    z-index: 9999;
+}
+
+#toggle-menu:checked + .navbar-list{
+    display: flex;
+}
+}
+
+#inicio {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px;
+}
+
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    gap: 40px
+}
+
+.text-container {
+    max-width: max(40%, 300px);    
+}
+
+.text-container h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    
+}
+
+.text-container{
+    font-size: 15px;
+    font-weight: 300;
+    gap: 60px;
+}
+
+.inicio-img {
+    background-image: url(./assets/3186532.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 400px;
+    width: 60%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .inicio-img {
+        display: none;
     }
-    .navbar i {
-        display: block; 
+    .description-container{
+        justify-content: center;
+        align-items: center;
     }
-    .navbar-list {
-        position: absolute;
-        background-color: white;
+    .text-container{
+        display: flex;
         flex-direction: column;
-        top: 100px;
-        right: 0;
-        width: 100%;
-        height: calc(100vh - 100px);
-        display: none; 
-        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+#about-us{
+    gap: 15%;
+    flex: wrap;
+}
+
+.about-img {
+    background-image: url(./assets/friends-attending-online-classes-together.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 400px;
+    border-radius: 5px;
     }
 
-#toggle-menu:checked + .navbar-list {
+.about-content{
+    height: 350px;
+    width: 400px;
     display: flex;
-} 
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-cards-container {
+    display: flex;
+    gap: 30px;
+
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    height: 60px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.about-card span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    #about-us {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 30px;
+}
+
+.footer.msg {
+    text-align: justify;
+    font-weight: 700;
+    font-size: 24px;
+    max-width: 450px;
+}
+
+.font-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 12px;
+    min-height: 100px;
+}
+
+.footer-social i:last-child{
+    margin-left: 10px;    
+}
+
+.footer-terms {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-terms a {
+    color: orange;
+    font-weight: 300;
+}
+
+@media (max-width:945px){
+    .footer{
+        gap: 40px;
+    }
+
+    .footer.msg{
+        max-width: 600px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-info{
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .footer-terms{
+        justify-content: center;
+        text-align: center;
+    }
 }
