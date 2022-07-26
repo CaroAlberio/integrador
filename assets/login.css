@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;    
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body{
+    background: white;
+    height: 100%;
+}
+
+.form-container {
+    background-color: wheat;
+    color: black;
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    padding: 50px;
+    transform: translate(-50%, -55%);
+    display: flex;
+    }
+
+.imput-container {
+    display: flex;
+    flex-direction:column;  
+    justify-content: center;  
+    gap: 25px;
+}
+
+.imput-container h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+.imput-container label {
+    font-size: 20px;
+}
+
+.imput-container a {
+    color: black;
+    text-align: center;
+}
+
+#email, #pass {
+    border-radius: 10px;
+    border: 1px solid orange;
+    padding: 8px;
+}
+button{
+    background-color: orange;
+    border: 0px solid orange;
+    border-radius: 10px;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    }
+
+button:hover {
+    background-color: white;
+    color: orange;
+    border: 0px solid orange;
+    transition: all 0.4s linear;
+}
+
+.button a {
+    color: black;
+    text-decoration: underline;
+}

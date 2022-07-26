@@ -279,6 +279,38 @@ display: none;
     }
 }
 
+/*Cursos*/
+
+#cursos{
+    flex-direction: column;
+    width: min(600px; 90%);
+    gap: 40px
+}
+
+.cursos-title-container {
+    text-align: center;
+    width: 85%;
+}
+
+.cursos-card-containers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.curso-card{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 50px;
+    width: min(70vw, 600px);
+    height: 100px;
+    background-color: wheat;
+}
+
+
 
 .footer {
     display: flex;
