@@ -17,72 +17,75 @@ html{
 body{
     background: white;
     height: 100%;
+    font-size: 14px;
 }
 
-.form-container {
-    background-color: wheat;
-    color: black;
-    height: 500px;
-    width: 500px;
-    border-radius: 15px;
-    position: absolute;
-    top: 60%;
-    left: 55%;
+
+.container {
+    font-family: "Roboto" , sans-serif ;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: wheat;
     padding: 50px;
-    transform: translate(-50%, -55%);
-    display: flex;
-    }
-
-.imput-container {
-    display: flex;
-    flex-direction:column;  
-    justify-content: center;  
-    gap: 25px;
-}
-
-.imput-container h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-
-
-.imput-container label {
-    font-size: 20px;
-}
-
-.imput-container a {
-    color: black;
-    text-align: center;
-}
-
-#email, #pass {
-    border-radius: 10px;
     border: 1px solid orange;
-    padding: 8px;
+    border-radius: 10px;
+    gap: 20px;
+
 }
-button{
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+input {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid orange;
+    padding: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="submit"]{
     background-color: orange;
     border: 0px solid orange;
     border-radius: 10px;
     outline: none;
-    width: 180px;
-    height: 40px;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
+    height: 50px;    
     cursor: pointer;
     transition: all 0.3s linear;
-    }
-
-button:hover {
-    background-color: white;
-    color: orange;
-    border: 0px solid orange;
-    transition: all 0.4s linear;
+    align-items: center;
+    
 }
 
-.button a {
+input[value="Ingresar"]{
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.login a {
+    text-decoration: underline ;
     color: black;
+    
+}
+
+.login a:hover{
     text-decoration: underline;
+    color: black;
 }

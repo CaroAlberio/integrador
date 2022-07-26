@@ -310,8 +310,42 @@ display: none;
     background-color: wheat;
 }
 
+.curso-info{
+    display: flex;
+    flex-direction: column;
+}
 
+.i {
+    font-size: 20px;
+}
 
+.divider {
+    width: min(90%, 600px);
+    margin-top: 80px;
+    height: 3px;
+    background-color: darkgoldenrod;
+}
+
+@media (max-width: 576px) {
+    .curso-card{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 30px 0px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .curso-info {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .i {
+        font-size: 20px;
+    }
+}
 .footer {
     display: flex;
     justify-content: space-around;
