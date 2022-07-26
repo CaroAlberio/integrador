@@ -283,7 +283,7 @@ display: none;
 
 #cursos{
     flex-direction: column;
-    width: min(600px; 90%);
+    width: min(600px 90%);
     gap: 40px
 }
 
